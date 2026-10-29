@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calaverita Literaria - Universidad Azteca</title>
+    <!-- Tailwind CSS y Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0f051d;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        .title-font { font-family: 'Cinzel', serif; }
+        .poem-font { 
+            font-family: 'Lora', serif; 
+            font-style: normal; 
+            text-align: justify; 
+            text-justify: inter-word;
+        }
+        
+        /* Animaciones para cempasúchil y murciélagos */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .floating { animation: float 4s ease-in-out infinite; }
+        .floating-delayed { animation: float 5s ease-in-out 2s infinite; }
+
+        /* Estilo de impresión para el QR */
+        @media print {
+            body * { visibility: hidden; }
+            #print-area, #print-area * { visibility: visible; }
+            #print-area { position: absolute; left: 0; top: 0; width: 100%; }
+        }
+    </style>
+</head>
+<body class="bg-[#0b0314] min-h-screen flex flex-col items-center justify-between relative selection:bg-amber-500 selection:text-black">
+
+    <!-- Papel Picado Decorativo Superior -->
+    <div class="w-full bg-gradient-to-r from-purple-900 via-orange-600 to-amber-500 py-2 shadow-lg flex justify-around items-center overflow-hidden border-b-4 border-amber-400">
+        <span class="text-xs md:text-sm font-bold tracking-widest text-black uppercase">💀 Día de Muertos 💀</span>
+        <span class="text-xs md:text-sm font-bold tracking-widest text-white uppercase">Universidad Azteca</span>
+        <span class="text-xs md:text-sm font-bold tracking-widest text-black uppercase">🎃 Halloween 🎃</span>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main class="container mx-auto px-4 py-8 max-w-3xl flex-grow z-10">
+        
+        <!-- Tarjeta Principal de la Calaverita -->
+        <div class="bg-[#180a2a]/90 border-4 border-amber-500/80 rounded-2xl shadow-2xl p-6 md:p-10 relative backdrop-blur-sm">
+            
+            <!-- Iconos decorativos esquinas -->
+            <div class="absolute -top-6 -left-6 text-4xl floating">🌼</div>
+            <div class="absolute -top-6 -right-6 text-4xl floating-delayed">🕯️</div>
+            <div class="absolute -bottom-6 -left-6 text-4xl floating-delayed">🦇</div>
+            <div class="absolute -bottom-6 -right-6 text-4xl floating">🌼</div>
+
+            <!-- Cabecera -->
+            <div class="text-center mb-8">
+                <h1 class="title-font text-3xl md:text-4xl lg:text-5xl font-black text-amber-400 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mb-2">
+                    Calaverita Literaria
+                </h1>
+                <p class="text-orange-300 tracking-wider text-sm md:text-base uppercase font-semibold">
+                    Edición Especial • Universidad Azteca
+                </p>
+                <div class="w-32 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto mt-4"></div>
+            </div>
+
+            <!-- Cuerpo de la Calaverita (Justificado y sin cursiva) -->
+            <div class="poem-font text-base md:text-lg text-gray-200 leading-relaxed space-y-6 px-2 md:px-8 bg-[#110520]/60 p-6 rounded-xl border border-purple-900 shadow-inner">
+                <p>Por los pasillos de la Azteca<br>
+                la Huesuda andaba paseando,<br>
+                buscando a cuál de los chavos<br>
+                se iría pronto llevando.</p>
+                
+                <p>En <strong>Económico Administrativo</strong><br>
+                quiso armar su auditoría,<br>
+                pero <strong>Contaduría</strong> le ajustó la cuenta<br>
+                y ni un peso le debía.</p>
+                
+                <p>A los de <strong>Administración</strong><br>
+                buscó hacerles una jugada,<br>
+                pero tenían su estrategia lista<br>
+                y la Muerte quedó parada.</p>
+                
+                <p>Llegó a la gente de <strong>Marketing</strong><br>
+                a pedirles una campaña,<br>
+                y le hicieron un trend tan viral<br>
+                ¡que la Calaca hasta baila!</p>
+
+                <p>A <strong>Comercio Internacional</strong><br>
+                la quiso exportar de un jalón,<br>
+                ¡pero le hicieron el trámite aduanal<br>
+                y la devolvieron en contenedor!</p>
+                
+                <p>Pasó con <strong>Sistemas</strong>, muy lista,<br>
+                a hackearles el servidor,<br>
+                pero le metieron un código<br>
+                ¡y le dieron un error!</p>
+                
+                <p>A <strong>Ingeniería Civil</strong><br>
+                quiso tirarle una muralla,<br>
+                pero esos puentes y cimientos<br>
+                resisten cualquier batalla.</p>
+                
+                <p>Quiso atrapar a <strong>Derecho</strong><br>
+                con una orden judicial,<br>
+                ¡y le metieron un amparo<br>
+                que la dejó en el penal!</p>
+                
+                <p>A los chicos de <strong>Psicología</strong><br>
+                los quiso venir a asustar,<br>
+                pero la sentaron en el diván<br>
+                ¡y la pusieron a terapia a hablar!</p>
+                
+                <p>En <strong>Pedagogía</strong> intentó<br>
+                dar una mala lección,<br>
+                pero enseñan con tanto amor<br>
+                que la Catrina aprendió de corazón.</p>
+                
+                <p>Ya para cerrar con broche,<br>
+                a <strong>Criminología</strong> fue a buscar,<br>
+                pero analizaron la escena<br>
+                ¡y a la Muerte van a arrestar!</p>
+                
+                <p class="text-center font-bold text-amber-300 pt-2">
+                    Sorprendida por tanta gente, la Flaca mejor se sentó:<br>
+                    <em>"En la Universidad Azteca no me llevo a nadie,<br>
+                    ¡mejor me matriculo yo!"</em>
+                </p>
+            </div>
+
+            <!-- Botón Generador de QR -->
+            <div class="mt-8 text-center">
+                <button onclick="toggleQRSection()" class="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-black font-extrabold px-8 py-3 rounded-full shadow-lg transform transition hover:scale-105 uppercase tracking-wider text-sm md:text-base border-2 border-amber-300">
+                    ✨ Generar Código QR de la Página ✨
+                </button>
+            </div>
+
+            <!-- Sección Oculta del Código QR Estilizado para Impresión -->
+            <div id="qr-section" class="hidden mt-8 pt-6 border-t-2 border-purple-800/60 flex flex-col items-center">
+                
+                <!-- Tarjeta imprimible con temática de Día de Muertos -->
+                <div id="print-area" class="bg-gradient-to-b from-[#220d3b] to-[#120421] p-6 rounded-2xl border-4 border-amber-400 shadow-2xl text-center max-w-sm w-full relative">
+                    <div class="absolute top-2 left-2 text-xl">🌼</div>
+                    <div class="absolute top-2 right-2 text-xl">🕯️</div>
+                    
+                    <h3 class="title-font text-amber-400 font-bold text-lg mb-1">Universidad Azteca</h3>
+                    <p class="text-xs text-orange-300 mb-4 uppercase tracking-widest font-semibold">Calaverita Literaria 2026</p>
+                    
+                    <!-- Contenedor del QR -->
+                    <div id="qrcode" class="bg-white p-4 rounded-xl inline-block shadow-inner mx-auto mb-4 border-2 border-amber-500"></div>
+                    
+                    <p class="text-xs text-gray-300 italic mb-4">Escanea con tu cámara para leer la calaverita literaria completa.</p>
+                    
+                    <div class="text-xs text-amber-400 font-bold tracking-wider">💀 ¡Feliz Día de Muertos! 💀</div>
+                </div>
+
+                <!-- Botón de Imprimir -->
+                <div class="mt-6 flex gap-4">
+                    <button onclick="window.print()" class="bg-amber-500 hover:bg-amber-600 text-black font-bold px-6 py-2 rounded-xl shadow transition flex items-center gap-2 text-sm">
+                        🖨️ Imprimir QR Temático
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full text-center py-4 text-xs text-gray-400 bg-[#07020d] border-t border-purple-900/40">
+        Hecho con tradición y calaveritas para la Universidad Azteca 🕯️🎃
+    </footer>
+
+    <!-- Script para generar el QR automáticamente con la dirección actual -->
+    <script>
+        let qrGenerated = false;
+        function toggleQRSection() {
+            const section = document.getElementById('qr-section');
+            section.classList.remove('hidden');
+            
+            if (!qrGenerated) {
+                const currentUrl = window.location.href;
+                new QRCode(document.getElementById("qrcode"), {
+                    text: currentUrl,
+                    width: 160,
+                    height: 160,
+                    colorDark: "#000000",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+                qrGenerated = true;
+            }
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
